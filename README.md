@@ -1,16 +1,40 @@
-# React + Vite
+# My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated developer portfolio built with **React**, **Tailwind CSS**, and **Framer Motion**.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React (Vite)
+- Tailwind CSS
+- Framer Motion
+- HTML5 Canvas API
 
-## React Compiler
+## 📦 Components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Component | Description |
+|---|---|
+| **ParticlesBackground** | Canvas-based floating particle animation with wrap-around effect. [Details →](./docs/ParticlesBackground.md) |
+| **CustomCursor** | Custom animated cursor that follows mouse movement. |
+| **Navbar** | Responsive navbar with overlay menu animation. |
+| **Home** | Landing/hero section. |
+| **IntroAnimation** | Initial page load animation. |
+| **About** | About me section. |
+| **Skills** | Skills showcase section. |
+| **Projects** | Project portfolio grid. |
+| **Experience** | Work experience timeline. |
+| **Testimonials** | Client/colleague testimonials section. |
+| **Contact** | Contact form section. |
+| **Footer** | Site footer. |
 
-## Expanding the ESLint configuration
+> 📁 Detailed explanations for individual components are available in the [`/docs`](./docs) folder.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Getting Started
+
+```bash
+npm install
+npm run dev
+```
+
+## 📄 License
+
+This project is for personal/portfolio use.
