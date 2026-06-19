@@ -9,7 +9,7 @@ import Testmonals from "./Sections/Testmonals";
 import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
 import ParticlesBackground from "./Componets/ParticleBackground";
-
+import CustomCursor from "./Componets/CustomCursor";
 function App() {
   const [pos, setPos] = useState({ x: 50, y: 50 });
 
@@ -27,6 +27,7 @@ function App() {
         backgroundImage: `radial-gradient(circle at ${pos.x}% ${pos.y}%, rgba(255,138,0,0.35), rgba(229,46,113,0.25) 25%, rgba(59,130,246,0.15) 45%, transparent 65%)`,
       }}
     >
+      <CustomCursor />
       <ParticlesBackground />
       <Navbar />
       <Home />
