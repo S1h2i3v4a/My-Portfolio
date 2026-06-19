@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+@layer utilities {
+  .gradient {
+    background: linear-gradient(-45deg, #ff8a00, #e52e71, #ff8a00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    animation: gradient-shift 4s ease infinite;
+  }
+
+  .bg-gradient-page {
+    background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e);
+    background-size: 200% 200%;
+    animation: gradient-shift 10s ease infinite;
+  }
+
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+.multi-hover {
+  background: black;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  transition: background 0.5s ease;
+}
+
+.multi-hover:hover {
+  background: linear-gradient(-45deg, black, white, orange, blue, red);
+  background-size: 400% 400%;
+  animation: multi-shift 5s ease infinite;
+}
+
+@keyframes multi-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
