@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+VITE_SERVICE_ID=service_gp9tzgf
+VITE_TEMPLATE_ID=template_w1eqv88
+VITE_PUBLIC_KEY=9Zhe922D1Kpw2Lzgn
