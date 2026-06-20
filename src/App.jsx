@@ -5,7 +5,7 @@ import About from "./Sections/About";
 import Skills from "./Sections/Skills";
 import Project from "./Sections/Project";
 import Experience from "./Sections/Experience";
-import Testmonals from "./Sections/Testmonals";
+import GithubStats from "./Sections/Testmonals";
 import Contact from "./Sections/Contact";
 import Footer from "./Sections/Footer";
 import ParticlesBackground from "./Componets/ParticleBackground";
@@ -37,7 +37,7 @@ function App() {
       <Skills />
       <Project />
       <Experience />
-      <Testmonals />
+      <GithubStats />
       <Contact />
       <Footer />
     </div>

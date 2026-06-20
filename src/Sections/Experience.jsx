@@ -8,27 +8,36 @@ import {
 } from "framer-motion";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
+// Since I don't have professional work experience yet, this timeline tracks
+// my actual learning journey through self-built projects — update as you go.
 const experiences = [
   {
-    role: "Full Stack Developer",
-    company: "BenrMents",
-    duration: "2022 – Present",
+    role: "Started Web Dev Basics",
+    company: "Self-taught · HTML, CSS, JS",
+    duration: "Year 1",
     description:
-      "Built and maintained scalable web applications using React, Node.js, and PostgreSQL. Collaborated closely with design and product teams to ship high-quality features on tight timelines.",
+      "Began with the fundamentals — HTML, CSS, and JavaScript. Built small static pages and a Calculator to get comfortable with logic and DOM manipulation.",
   },
   {
-    role: "Frontend Engineer",
-    company: "StudioX Labs",
-    duration: "2021 – 2022",
+    role: "React & Frontend Projects",
+    company: "To-Do List, LinkedIn Clone, Reusable Components",
+    duration: "Year 2",
     description:
-      "Led the migration of a legacy jQuery codebase to modern React. Improved page performance by 40% through code splitting, lazy loading, and asset optimization.",
+      "Moved into React, learning components, hooks, and state management. Built a To-Do app, reusable React components, and a LinkedIn Clone to practice real UI patterns.",
   },
   {
-    role: "Junior Developer",
-    company: "CodeCraft Agency",
-    duration: "2020 – 2021",
+    role: "Full Stack (MERN)",
+    company: "Blog Management, Expense Management",
+    duration: "Year 2 – 3",
     description:
-      "Developed responsive landing pages and e-commerce storefronts. Worked directly with clients to translate design mockups into pixel-perfect implementations.",
+      "Started connecting frontend with backend — Node.js, Express, MongoDB. Built a Blog Management app and an Expense Management system to understand CRUD, auth, and APIs end to end.",
+  },
+  {
+    role: "Exploring AI / ML",
+    company: "Loan Approval Model, Skin Disease Detection (CNN)",
+    duration: "Currently",
+    description:
+      "Diving into machine learning alongside DSA practice in Java — built a Loan Approval prediction model and a CNN-based skin disease detection system. Now preparing for placements while continuing to build.",
   },
 ];
 
@@ -45,7 +54,7 @@ function useIsMobile() {
   return isMobile;
 }
 
-// ─── Sub-component: one experience card ──────────────────────────────────────
+// ─── Sub-component: one journey card ─────────────────────────────────────────
 function ExperienceItem({ exp, idx, start, end, scrollYProgress, layout }) {
   const opacity = useTransform(scrollYProgress, [start, end], [0, 1]);
   const y = useTransform(scrollYProgress, [start, end], [30, 0]);
@@ -204,7 +213,7 @@ export default function Experience() {
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
         >
-          Experience
+          My Journey
         </motion.h2>
 
         <div className="relative z-10 w-full flex justify-center px-4">

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import S from "../assets/S.mp4"
 
 // All social icons as inline SVGs — zero dependency on any icon
 // package, so there's no risk of import-name mismatches ever again.
@@ -72,7 +73,7 @@ export default function Footer() {
             textShadow: "0 2px 18px rgba(255,255,255,0.45)",
           }}
         >
-          Gaurav Gupta
+          Shivam Keshari
         </h1>
 
         {/* Gradient divider line */}
@@ -113,7 +114,7 @@ export default function Footer() {
 
         {/* Credits */}
         <p className="text-xs text-gray-400">
-          &copy; {new Date().getFullYear()} Gaurav Gupta. All rights
+          &copy; {new Date().getFullYear()} Shivam Keshari. All rights
           reserved.
         </p>
       </motion.div>

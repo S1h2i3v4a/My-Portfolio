@@ -2,6 +2,7 @@ import { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import OverlayMenu from "./OverlayMenu";
 
+
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -11,7 +12,7 @@ export default function NavBar() {
     "Skills",
     "Projects",
     "Experience",
-    "Testimonial",
+    "GithubStats",
     "Contact",
   ];
 
@@ -37,10 +38,10 @@ export default function NavBar() {
           {/* Logo + Name */}
           <div className="flex items-center space-x-3">
             <div className="w-9 h-9 rounded-full bg-gradient-to-br from-pink-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm select-none">
-              G
+              S
             </div>
             <span className="hidden sm:block text-white font-bold text-lg tracking-tight">
-              Gaurav
+              Shivam
             </span>
           </div>
 

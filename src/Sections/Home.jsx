@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useRef, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { motion } from "framer-motion";
 import { FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa";
 import ParticlesBackground from "../Componets/ParticleBackground";
 import avatarImg from "../assets/avatar.png";
 
-// Typewriter roles
-const ROLES = ["Web Developer", "Software Developer"];
+// Typewriter roles — updated to reflect AI/ML + DSA + Web Dev focus
+const ROLES = ["AI/ML Enthusiast", "DSA Problem Solver (Java)", "Web Developer"];
 
 // Social links
 const SOCIALS = [
   {
     icon: FaTwitter,
     label: "Twitter",
-    href: "https://twitter.com/yourusername",
+    href: "https://x.com/ShivamK11959343",
   },
-  { icon: FaGithub, label: "GitHub", href: "https://github.com/yourusername" },
+  { icon: FaGithub, label: "GitHub", href: "https://github.com/S1h2i3v4a" },
   {
     icon: FaLinkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/in/yourusername",
+    href: "https://www.linkedin.com/in/shivam15keshari/",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function Home() {
             className="text-4xl sm:text-5xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#1cdad2] to-[#0bf8] drop-shadow-lg"
           >
             Hello, I'm <br />
-            <span className="text-white whitespace-nowrap">Gaurav Gupta</span>
+            <span className="text-white whitespace-nowrap">Shivam Keshari</span>
           </motion.h1>
 
           {/* Paragraph */}
@@ -108,8 +108,10 @@ export default function Home() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="mt-6 text-base sm:text-lg text-gray-300 leading-relaxed max-w-xl mx-auto lg:mx-0"
           >
-            I craft fast, beautiful, and accessible web experiences — from
-            concept to production. Let's build something remarkable together.
+            A B.Tech CSE student passionate about Data Structures &amp;
+            Algorithms, Machine Learning, and building clean, performant web
+            experiences. Currently exploring AI/ML projects and sharpening my
+            DSA skills in Java — always excited to build, learn, and ship.
           </motion.p>
 
           {/* CTA buttons */}
@@ -126,7 +128,7 @@ export default function Home() {
               View My Work
             </a>
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1SgOOeGq1lRKYZzQWPO6HfMT0S8-ZiqXr/view?usp=drive_link"
               download
               className="inline-flex items-center justify-center px-6 py-3 rounded-full font-medium text-lg text-black bg-white hover:bg-gray-200 shadow-lg hover:scale-105 transition-all duration-300"
             >
@@ -177,7 +179,7 @@ export default function Home() {
             />
             <motion.img
               src={avatarImg}
-              alt="Gaurav Gupta"
+              alt="Shivam Keshari"
               className="relative z-10 rounded-2xl object-contain select-none pointer-events-none"
               style={{
                 right: "-30px",

@@ -11,13 +11,10 @@ const skillSet = [
   { name: "TypeScript",icon: "📘" },
   { name: "Node.js",   icon: "🟩" },
   { name: "MongoDB",   icon: "🍃" },
-  { name: "PostgreSQL",icon: "🐘" },
+  { name: "MySQL",     icon: "🗄️" },
   { name: "TailwindCSS",icon: "🌊" },
-  { name: "Docker",    icon: "🐳" },
   { name: "Python",    icon: "🐍" },
   { name: "Java",      icon: "☕" },
-  { name: "Redis",     icon: "🔴" },
-  { name: "GraphQL",   icon: "◈" },
 ];
 
 // Duplicate for seamless loop

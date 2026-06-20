@@ -7,12 +7,12 @@ import {
 } from "framer-motion";
 
 // Replace these imports with your actual project screenshots
-import img1 from "../assets/img1.svg";
-import img2 from "../assets/img2.svg";
-import img3 from "../assets/img3.svg";
-import photo1 from "../assets/photo1.svg";
-import photo2 from "../assets/photo2.svg";
-import photo3 from "../assets/photo3.svg";
+import img1 from "../assets/img1.png";
+import img2 from "../assets/img2.png";
+import img3 from "../assets/img3.jpg";
+import photo1 from "../assets/photo1.jpg";
+import photo2 from "../assets/photo2.jpg";
+import photo3 from "../assets/photo3.jpg";
 
 // ─── Custom hook: detect mobile ──────────────────────────────────────────────
 function useIsMobile() {
@@ -28,24 +28,38 @@ function useIsMobile() {
 }
 
 // ─── Project data ─────────────────────────────────────────────────────────────
+// NOTE: Swap img1/img2/img3/photo1/photo2/photo3 with real screenshots of
+// each project (README banners or live demo screenshots work great).
 const projects = [
   {
-    title: "NK Studio",
-    link: "https://www.nk.studio",
+    title: "Loan Approval Prediction",
+    link: "https://github.com/S1h2i3v4a/LOAN_Approval",
     bgColor: "#0d4d3d",
     image: (isMobile) => (isMobile ? photo1 : img1),
   },
   {
-    title: "Gamely",
-    link: "https://gamely.app",
+    title: "LinkedIn Clone",
+    link: "https://github.com/S1h2i3v4a/LinkdIn-Clone",
     bgColor: "#1a1340",
     image: (isMobile) => (isMobile ? photo2 : img2),
   },
   {
-    title: "Hungry Tiger",
-    link: "https://hungrytiger.io",
+    title: "Expense Management",
+    link: "https://github.com/S1h2i3v4a/Expense_Management",
     bgColor: "#3d1a00",
     image: (isMobile) => (isMobile ? photo3 : img3),
+  },
+  {
+    title: "Blog Management",
+    link: "https://github.com/S1h2i3v4a/Blog-Management",
+    bgColor: "#1f2937",
+    image: (isMobile) => (isMobile ? photo1 : img1),
+  },
+  {
+    title: "React To-Do List",
+    link: "https://github.com/S1h2i3v4a/ToDo-list1-with-react",
+    bgColor: "#1e3a5f",
+    image: (isMobile) => (isMobile ? photo2 : img2),
   },
 ];
 
@@ -59,7 +73,7 @@ export default function Projects() {
     offset: ["start start", "end end"],
   });
 
-  // Thresholds: 0→⅓→⅔→1
+  // Thresholds: evenly spaced across however many projects we have
   const thresholds = useMemo(
     () => projects.map((_, i) => (i + 1) / projects.length),
     [],
@@ -91,7 +105,7 @@ export default function Projects() {
       >
         {/* Heading */}
         <h2 className="z-10 text-3xl font-semibold mb-8 tracking-tight text-white/90">
-          My Work
+          My Projects
         </h2>
 
         {/* Display area */}
@@ -170,11 +184,11 @@ export default function Projects() {
           href={activeProject.link}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`View ${activeProject.title}`}
+          aria-label={`View ${activeProject.title} on GitHub`}
           className="mt-6 z-20 inline-flex items-center justify-center px-5 py-3 rounded-lg
                      bg-white text-black font-semibold hover:bg-gray-200 transition"
         >
-          View Project
+          View on GitHub
         </a>
 
         {/* Dot indicators */}

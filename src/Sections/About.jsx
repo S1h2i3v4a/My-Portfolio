@@ -1,24 +1,25 @@
 import { motion } from "framer-motion";
-import profileImg from "../assets/avatar.png";
+import profileImg from "../assets/astro.png";
+import S from "../assets/S.mp4";
 
 const STATS = [
-  { label: "Experience", value: "+1 Year" },
-  { label: "Specialty",  value: "Full Stack" },
-  { label: "Focus",      value: "Performance & UX" },
+  { label: "Status", value: "B.Tech CSE" },
+  { label: "Core", value: "DSA in Java" },
+  { label: "Exploring", value: "AI / ML" },
 ];
 
 const fadeUp = {
-  initial:    { opacity: 0, y: 24 },
-  whileInView:{ opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
   transition: { duration: 0.6 },
-  viewport:   { once: true, amount: 0.4 },
+  viewport: { once: true, amount: 0.4 },
 };
 
 const slideLeft = {
-  initial:    { opacity: 0, x: -30 },
-  whileInView:{ opacity: 1, x: 0 },
+  initial: { opacity: 0, x: -30 },
+  whileInView: { opacity: 1, x: 0 },
   transition: { duration: 0.6 },
-  viewport:   { once: true, amount: 0.4 },
+  viewport: { once: true, amount: 0.4 },
 };
 
 export default function About() {
@@ -27,18 +28,49 @@ export default function About() {
       id="about"
       className="relative min-h-screen bg-black text-white flex items-center justify-center overflow-hidden py-20 px-6 md:px-10"
     >
+      <video
+        aria-hidden="true"
+        src={S}
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none filter blur-sm z-0"
+      />
       {/* Floating blobs */}
       {[
-        { top: "10%", left: "0", size: 360, delay: "0s", colors: "from-[#302663] via-[#0bf8] to-[#1cd8d2]" },
-        { bottom: "0", right: "10%", size: 420, delay: "300ms", colors: "from-[#302663] via-[#0bf8] to-[#1cd8d2]" },
-        { top: "50%", left: "50%", size: 220, delay: "0s",   colors: "from-[#302663] via-[#0bf8] to-[#1cd8d2]" },
+        {
+          top: "10%",
+          left: "0",
+          size: 360,
+          delay: "0s",
+          colors: "from-[#302663] via-[#0bf8] to-[#1cd8d2]",
+        },
+        {
+          bottom: "0",
+          right: "10%",
+          size: 420,
+          delay: "300ms",
+          colors: "from-[#302663] via-[#0bf8] to-[#1cd8d2]",
+        },
+        {
+          top: "50%",
+          left: "50%",
+          size: 220,
+          delay: "0s",
+          colors: "from-[#302663] via-[#0bf8] to-[#1cd8d2]",
+        },
       ].map((b, i) => (
         <div
           key={i}
           className="pointer-events-none absolute rounded-full animate-pulse"
           style={{
-            top: b.top, left: b.left, bottom: b.bottom, right: b.right,
-            width: b.size, height: b.size,
+            top: b.top,
+            left: b.left,
+            bottom: b.bottom,
+            right: b.right,
+            width: b.size,
+            height: b.size,
             opacity: i === 2 ? 0.1 : 0.2,
             filter: "blur(120px)",
             animationDelay: b.delay,
@@ -49,10 +81,11 @@ export default function About() {
 
       {/* Content wrapper */}
       <div className="relative z-10 w-full max-w-6xl mx-auto flex flex-col md:flex-row items-stretch gap-10">
-
         {/* ── LEFT — Card ──────────────────────────────────────── */}
-        <motion.div {...slideLeft} className="flex flex-col items-center md:items-start gap-6 md:w-1/2">
-
+        <motion.div
+          {...slideLeft}
+          className="flex flex-col items-center md:items-start gap-6 md:w-1/2"
+        >
           {/* Avatar */}
           <motion.div
             whileHover={{ scale: 1.02 }}
@@ -62,7 +95,7 @@ export default function About() {
           >
             <img
               src={profileImg}
-              alt="Gaurav Gupta"
+              alt="Shivam Keshari"
               className="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
               loading="lazy"
             />
@@ -71,12 +104,14 @@ export default function About() {
           {/* Name + role */}
           <div className="text-center md:text-left">
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white">
-              Gaurav Gupta
+              Shivam Keshari
             </h2>
-            <p className="mt-2 text-lg text-white/90 font-semibold">Full Stack Developer</p>
+            <p className="mt-2 text-lg text-white/90 font-semibold">
+              CSE Student &middot; Aspiring SDE
+            </p>
             <p className="mt-3 text-sm text-gray-400 max-w-xs leading-relaxed">
-              I build scalable, performant web apps with React, Next.js, Node, and
-              more — bridging design and engineering.
+              Strengthening my fundamentals through DSA, building with React,
+              and applying ML to real problems — one project at a time.
             </p>
           </div>
 
@@ -117,17 +152,26 @@ export default function About() {
         </motion.div>
 
         {/* ── RIGHT — About Me text ─────────────────────────────── */}
-        <motion.div {...fadeUp} className="md:w-1/2 flex flex-col justify-center text-center md:text-left">
-          <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-white">About Me</h3>
+        <motion.div
+          {...fadeUp}
+          className="md:w-1/2 flex flex-col justify-center text-center md:text-left"
+        >
+          <h3 className="text-2xl sm:text-3xl font-bold mb-3 text-white">
+            About Me
+          </h3>
           <p className="text-gray-300 leading-relaxed text-base sm:text-lg mb-4">
-            I'm a full-stack developer passionate about crafting seamless digital
-            experiences. My stack spans React, Next.js, Node.js, and modern CSS —
-            with a strong focus on performance and accessibility.
+            I'm a B.Tech CSE student who started with frontend and backend
+            basics — building projects like a LinkedIn Clone, Blog
+            Management app, Expense Management system, and a few React/MERN
+            apps (To-Do apps, Calculator, reusable React components) to get
+            comfortable with the full stack.
           </p>
           <p className="text-gray-400 leading-relaxed text-base mt-2">
-            Outside of code, I love design systems, open-source projects, and
-            helping developers level up their skills. I'm always looking for
-            exciting opportunities to build meaningful products.
+            From there I moved into AI/ML, building a Loan Approval
+            prediction model and a CNN-based skin disease detection system.
+            I don't have professional experience yet — what I have is
+            consistent practice, a growing GitHub, and a strong focus on DSA
+            in Java as I prepare for placements.
           </p>
         </motion.div>
       </div>
